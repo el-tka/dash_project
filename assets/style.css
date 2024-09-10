@@ -1,0 +1,79 @@
+
+/* Cyberpunk dark theme styling */
+.minimalist-body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.techno-panel {
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(255, 0, 102, 0.7);
+    padding: 20px;
+    border: 1px solid #ff0099;
+}
+
+h1.display-4 {
+    color: #ff00ff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff0099, 0 0 30px #ff00cc;
+}
+
+.techno-button {
+    background: linear-gradient(135deg, #ff0099, #9900ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 153, 0.6);
+}
+
+.techno-button:hover {
+    background: linear-gradient(135deg, #9900ff, #ff0099);
+    box-shadow: 0 6px 20px rgba(255, 0, 153, 0.9);
+}
+
+p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: #00ccff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff0099;
+}
+
+.cyberpunk-dropdown .Select-control {
+    background-color: #1a1a1a;
+    border: 2px solid #ff0099;
+    border-radius: 6px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 15px rgba(255, 0, 153, 0.4);
+}
+
+.cyberpunk-dropdown .Select-menu-outer {
+    background-color: #1a1a1a;
+    border: 1px solid #ff0099;
+}
+
+.cyberpunk-dropdown .Select-option {
+    background-color: #1a1a1a;
+    color: #00008b;
+}
+
+.cyberpunk-dropdown .Select-option:hover {
+    background-color: #ff0099;
+    color: #00008b;
+}
