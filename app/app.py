@@ -6,8 +6,8 @@ import plotly.express as px
 import pyodbc
 import pandas as pd
 import plotly.graph_objs as go
-from data import get_weather_data
-from layout import create_layout
+from data.database import get_weather_data
+from layout.layout import create_layout
 
 # Загрузка данных
 query = "SELECT * FROM dbo.moscow_weather_data_last_10_years"
