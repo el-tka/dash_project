@@ -4,3 +4,4 @@ pandas
 pyodbc==4.0.32
 numpy>=1.21.0
 plotly>=5.0.0
+python-dotenv

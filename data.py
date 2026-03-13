@@ -1,33 +1,40 @@
-
 import pyodbc
 import pandas as pd
 
-def get_weather_data(query):
-    server = 'RICCO\SQLEXPRESS'  # Замените на имя вашего сервера
-    database = 'WeatherDB'  # Замените на название базы данных
-    driver = '{ODBC Driver 17 for SQL Server}'  # Убедитесь, что ODBC драйвер установлен
-    uid = 'sa'
-    pwd = 'Dialog1996'
+from utils.config import Config
 
-    connection_string = f"DRIVER={driver};SERVER={server};DATABASE={database};" \
-                        f"UID={uid};PWD={pwd};TrustServerCertificate=yes;" \
-      #                  f"Trusted_Connection=yes;"
-    #connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};Trusted_Connection=yes;'
+
+def get_connection():
+
+    connection_string = (
+        f"DRIVER={{{Config.DB_DRIVER}}};"
+        f"SERVER={Config.DB_SERVER};"
+        f"DATABASE={Config.DB_DATABASE};"
+        f"UID={Config.DB_USER};"
+        f"PWD={Config.DB_PASSWORD};"
+        f"TrustServerCertificate=yes;"
+    )
+
+    connection = pyodbc.connect(connection_string)
+
+    return connection
+
+
+def get_weather_data(query: str) -> pd.DataFrame:
+
+    connection = None
 
     try:
-        connection = pyodbc.connect(connection_string)
-        print("Подключение успешно")
+        connection = get_connection()
 
-        # Выполнение запроса и загрузка данных в DataFrame
         df = pd.read_sql_query(query, connection)
+
         return df
 
     except Exception as e:
-        print(f"Ошибка при подключении к базе данных: {e}")
+        print(f"Ошибка подключения к базе данных: {e}")
         return None
 
     finally:
-        # Закрытие соединения
-        if 'connection' in locals() and connection:
+        if connection:
             connection.close()
-            print("Соединение закрыто")
