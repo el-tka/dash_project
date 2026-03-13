@@ -93,39 +93,56 @@ Key fields include:
 
 # Visualizations
 
-## Temperature Trends
+## 1. Daily Temperature Trends
 
-A line chart displaying daily maximum and minimum temperatures.
+A line chart displaying daily maximum and minimum temperatures for the selected year.
 
-This allows analysis of:
+This visualization helps identify:
 
 - seasonal patterns
-- extreme temperatures
-- long-term trends
 
----
+- short-term fluctuations
 
-## Temperature vs Solar Radiation
+- extreme temperature periods
 
-A scatter plot visualizing the relationship between:
+## 2. Average Maximum Temperature by Year
 
-- solar radiation
-- maximum temperature
-- wind speed
-- precipitation levels
+A yearly trend line showing the average maximum temperature across the dataset.
 
----
+This chart is useful for:
 
-## Wind Rose
+- comparing years
 
-A polar chart showing wind speed distribution across defined categories.
+- identifying long-term climate tendencies
 
----
+- spotting warmer and cooler periods over time
 
-## Monthly Precipitation
+## 3. Correlation Analysis: Temperature and Solar Radiation
 
-A bar chart showing the total precipitation by month for the selected year.
+A scatter plot showing the relationship between maximum temperature and solar radiation index.
 
+This visualization supports:
+
+- correlation analysis between meteorological variables
+
+- pattern detection across the selected year
+
+- exploratory analysis of possible climate dependencies
+
+## 4. Wind Rose
+
+A polar bar chart representing the distribution of wind speed across predefined categories.
+
+This chart helps analyze:
+
+- wind intensity distribution
+
+- frequency of different wind speed ranges
+
+## 5. Monthly Precipitation Analysis
+
+A bar chart showing total monthly precipitation for the selected year.
+This allows users to compare precipitation intensity across different months and seasons.
 ---
 
 # Installation
